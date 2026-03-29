@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Purchase Order System</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ERP Purchase Order System</h1>
+    <p class="subtitle">Create and manage purchase orders</p>
+
+    <div class="card">
+      <h2>Create Purchase Order</h2>
+
+      <label for="vendor">Vendor Name</label>
+      <input id="vendor" placeholder="Enter vendor name">
+
+      <div class="products-header">
+        <h3>Products</h3>
+        <button class="secondary-btn" onclick="addProduct()">+ Add Product</button>
+      </div>
+
+      <div id="products"></div>
+
+      <button class="primary-btn" onclick="submitPO()">Submit Purchase Order</button>
+    </div>
+
+    <div class="card">
+      <div class="products-header">
+        <h2>Purchase Orders</h2>
+        <button class="secondary-btn" onclick="loadPOs()">Refresh</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>Vendor</th>
+          <th>Total Amount</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="poTableBody">
+          <tr>
+            <td colspan="3">No purchase orders yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
